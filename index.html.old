@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Site One Page</title>
+    <!--<link rel="stylesheet" href="styles/main.css">-->
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#accueil">Accueil</a></li>
+                <li><a href="#qui-je-suis">Qui je suis</a></li>
+                <li><a href="#projets">Vos projets</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="accueil">
+        <h1>Bienvenue sur mon site</h1>
+        <p>Un site One Page responsive</p>
+    </section>
+
+    <section id="qui-je-suis">
+        <h2>Qui je suis</h2>
+        <p>Présentation de moi.</p>
+    </section>
+
+    <section id="projets">
+        <h2>Vos projets</h2>
+        <p>Liste des projets réalisés.</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form>
+            <input type="text" placeholder="Votre nom" required>
+            <input type="email" placeholder="Votre email" required>
+            <textarea placeholder="Votre message" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <script src="./src/index.js"></script>
+</body>
+</html>
