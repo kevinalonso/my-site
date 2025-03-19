@@ -115,7 +115,7 @@ section {
     height: auto; /* Maintenir les proportions de l'image */
 }
 
-#projets{
+#projets, #accueil{
     //background: #efcc95;
     background: repeating-linear-gradient(
         45deg,        /* Angle des bandes */
@@ -157,6 +157,10 @@ section {
 
 #contact{
     background-color: #ffffff;
+}
+
+.tel-contact{
+    text-align: left;
 }
 
 #map {
