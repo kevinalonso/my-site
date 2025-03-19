@@ -5,9 +5,13 @@ export function NavigationSection() {
 
     // Fonction pour activer l'animation des cartes
     const activateCardsAnimation = () => {
-        cards.forEach((card) => {
+        cards.forEach((card, index) => {
+
+            let delay = index * 400;
             // Ajout de la classe 'visible' pour activer l'animation
-            card.classList.add('visible-translation');
+            setTimeout(() => {
+                card.classList.add('visible-translation');
+            }, delay);
         });
     };
 
