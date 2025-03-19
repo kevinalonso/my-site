@@ -1,10 +1,12 @@
 /***CODE COULEUR HEXA***/
-//orange :#efcc95
-//noir : #000000
-//blanc:#ffffff
-//ombre : #151515
+//orange :#efcc95;
+//noir : #000000;
+//blanc:#ffffff;
+//ombre : #151515;
 /************************/
 
+/*Import des polices*/
+@import url('font.scss');
 
 body {
     font-family: Arial, sans-serif;
@@ -113,7 +115,16 @@ section {
 }
 
 #projets{
-    background: #efcc95;
+    //background: #efcc95;
+    background: repeating-linear-gradient(
+        45deg,        /* Angle des bandes */
+        #efcc95,      /* Couleur de base */
+        #efcc95 40%, /* Largeur d'une bande */
+        #e6b877 5%, /* Début de la bande suivante */
+        #e6b877 100%  /* Largeur de la bande */
+    );
+    background-position: left top; /* Assure que les bandes partent de la gauche */
+    background-size: cover; /* S'adapte à toute la section */
 }
 
 .img-container {
@@ -157,11 +168,45 @@ section {
 
 .card {
     height: 400px; /* Ajustez cette valeur selon vos besoins */
+    opacity: 0; /* Cacher au départ */
+    transform: translateY(50px); /* Décalage vers le bas */
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.card.visible-translation {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card:nth-child(1) {
+    animation: fadeInUp 0.8s ease-out forwards 0.2s;
+}
+.card:nth-child(2) {
+    animation: fadeInUp 0.8s ease-out forwards 0.6s;
+}
+.card:nth-child(3) {
+    animation: fadeInUp 0.8s ease-out forwards 1s;
+}
+
+
+.card-img-top{
+    height: 400px;
+    object-fit: cover;
+}
+
+
+.projet-text{
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
     .separator {
         display: none; /* Cacher le séparateur sur les petits écrans */
+    }
+
+    .mobile-qui-je-suis{
+        text-align: left !important;
     }
 }
 

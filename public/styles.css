@@ -1,16 +1,133 @@
+/*!********************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./assets/stylesheets/font.scss ***!
+  \********************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@100;200;300;400;500;600;700;800;900&display=swap);
+/*!************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./assets/stylesheets/font.scss (1) ***!
+  \************************************************************************************/
+.barlow-semi-condensed-thin {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-extralight {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-light {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-regular {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-medium {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: larger;
+  }
+  
+  .barlow-semi-condensed-semibold {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-bold {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-extrabold {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 800;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-black {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+  }
+  
+  .barlow-semi-condensed-thin-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 100;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-extralight-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 200;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-light-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 300;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-regular-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-medium-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 500;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-semibold-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 600;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-bold-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 700;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-extrabold-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 800;
+    font-style: italic;
+  }
+  
+  .barlow-semi-condensed-black-italic {
+    font-family: "Barlow Semi Condensed", sans-serif;
+    font-weight: 900;
+    font-style: italic;
+  }
+
 /*!*******************************************************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./assets/stylesheets/styles.scss ***!
   \*******************************************************************************************************************************************************************/
 @charset "UTF-8";
+/***CODE COULEUR HEXA***/
+/************************/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  scroll-behavior: smooth;
-  background-color: red; }
+  scroll-behavior: smooth; }
 
 header {
-  background: #333;
+  background: #000000;
   padding: 15px;
   position: fixed;
   width: 100%;
@@ -31,9 +148,12 @@ header nav ul li {
   margin: 0 15px; }
 
 header nav ul li a {
-  color: white;
+  color: #ffffff;
   text-decoration: none;
   font-size: 18px; }
+
+.nav-link {
+  color: #ffffff; }
 
 section {
   min-height: 100vh;
@@ -45,7 +165,7 @@ section {
 
 /* Section Accueil */
 #accueil {
-  background: #f4f4f4;
+  background: #efcc95;
   position: relative;
   height: 100vh;
   /* La section prendra toute la hauteur de la fenêtre */
@@ -93,16 +213,21 @@ section {
   background-color: transparent; }
 
 #qui-je-suis {
-  background: #f4f4f4;
+  background: ffffff;
   /* Ajoutez une couleur de fond si vous souhaitez */ }
 
 #qui-je-suis img {
   max-width: 100%;
   /* Pour s'assurer que l'image ne dépasse pas sa colonne */
   height: auto;
-  /* Maintenir les proportions de l'image */
-  border-radius: 50%;
-  /* Pour une image ronde (si ce n'est pas déjà fait avec Bootstrap) */ }
+  /* Maintenir les proportions de l'image */ }
+
+#projets {
+  background: repeating-linear-gradient(45deg, #efcc95, #efcc95 40%, #e6b877 5%, #e6b877 100%);
+  background-position: left top;
+  /* Assure que les bandes partent de la gauche */
+  background-size: cover;
+  /* S'adapte à toute la section */ }
 
 .img-container {
   display: flex;
@@ -132,11 +257,11 @@ section {
   border-radius: 50%;
   /* Rend l’image circulaire */ }
 
-.me-container {
-  height: 100vh; }
-
+/*.me-container{
+    height: 100vh;
+}*/
 #contact {
-  background-color: white; }
+  background-color: #ffffff; }
 
 #map {
   width: 100%;
@@ -145,8 +270,23 @@ section {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   overflow: hidden; }
 
+.card {
+  height: 400px;
+  /* Ajustez cette valeur selon vos besoins */ }
+
+.card-img-top {
+  height: 400px;
+  -o-object-fit: cover;
+  object-fit: cover; }
+
+.projet-text {
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+
 @media (max-width: 768px) {
   .separator {
     display: none;
-    /* Cacher le séparateur sur les petits écrans */ } }
+    /* Cacher le séparateur sur les petits écrans */ }
+  .mobile-qui-je-suis {
+    text-align: left !important; } }
 

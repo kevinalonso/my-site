@@ -29,7 +29,7 @@ let config = {
         ]
     },
     plugins: [
-        new MiniCssExtractPlugin({ filename: "styles.css" })
+        new MiniCssExtractPlugin({ filename: "styles.css" }),
     ],
     devServer: {
         static: path.resolve(__dirname, "./public"),

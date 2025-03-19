@@ -1,196 +1,197 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mon Site One Page</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="font.css">
-</head>
-<body>
-    <header>
-        <!-- NavBar avec Logo à gauche et Menu burger pour mobile -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-black">
-            <div class="container-fluid">
-                <!-- Logo en haut à gauche -->
-                <a class="navbar-brand" href="#accueil">Logo</a>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mon Site One Page</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <header>
+            <!-- NavBar avec Logo à gauche et Menu burger pour mobile -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-black">
+                <div class="container-fluid">
+                    <!-- Logo en haut à gauche -->
+                    <a class="navbar-brand" href="#accueil">Logo</a>
 
-                <!-- Menu burger pour mobile -->
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                    <!-- Menu burger pour mobile -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <!-- Liens de navigation -->
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item">
+                                <a class="nav-link barlow-semi-condensed-semibold" href="#accueil">Accueil</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link barlow-semi-condensed-semibold" href="#qui-je-suis">Qui je suis</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link barlow-semi-condensed-semibold" href="#projets">Vos projets</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link barlow-semi-condensed-semibold" href="#contact">Contact</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <!-- Sections de contenu -->
+        <section id="accueil">
+            
+            <div id="carouselExampleCaptions" class="carousel slide">
+                <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
+                    <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
                 </button>
-
-                <!-- Liens de navigation -->
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#accueil">Accueil</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#qui-je-suis">Qui je suis</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#projets">Vos projets</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#contact">Contact</a>
-                        </li>
-                    </ul>
-                </div>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+                </button>
             </div>
-        </nav>
-    </header>
-
-    <!-- Sections de contenu -->
-    <section id="accueil">
+        </section>
         
-        <div id="carouselExampleCaptions" class="carousel slide">
-            <div class="carousel-indicators">
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
-              <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-              <div class="carousel-item active">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: First slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#777"></rect><text x="50%" y="50%" fill="#555" dy=".3em">First slide</text></svg>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>First slide label</h5>
-                  <p>Some representative placeholder content for the first slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Second slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#666"></rect><text x="50%" y="50%" fill="#444" dy=".3em">Second slide</text></svg>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Second slide label</h5>
-                  <p>Some representative placeholder content for the second slide.</p>
-                </div>
-              </div>
-              <div class="carousel-item">
-                <svg class="bd-placeholder-img bd-placeholder-img-lg d-block w-100" width="800" height="800" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Placeholder: Third slide" preserveAspectRatio="xMidYMid slice" focusable="false"><title>Placeholder</title><rect width="100%" height="100%" fill="#555"></rect><text x="50%" y="50%" fill="#333" dy=".3em">Third slide</text></svg>
-                <div class="carousel-caption d-none d-md-block">
-                  <h5>Third slide label</h5>
-                  <p>Some representative placeholder content for the third slide.</p>
-                </div>
-              </div>
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
-    </section>
-    
 
-    <section id="qui-je-suis" class="py-5">
-        <div class="container me-container">
-            <!-- Titre centré en haut de la section -->
-            <div class="text-center mb-4">
-                <h2>Qui je suis ?</h2>
-            </div>
-    
-            <div class="row">
-                
-                <!-- Colonne pour la description à droite -->
-                <div class="col-12 col-md-5 text-lg-start">
-                    <p>Fort de plusieurs années d'expérience dans le domaine du développement informatique, je suis un développeur polyvalent et passionné, capable de créer des solutions logicielles et web adaptées aux besoins spécifiques des clients. Mon expertise couvre une large gamme de langages de programmation et de technologies, me permettant d'intervenir dans différents secteurs pour répondre aux défis techniques de chaque projet.</p>
-
-                    <p>Ma capacité d'écoute et ma réactivité, je suis en mesure de comprendre rapidement les besoins de mes clients et de proposer des solutions sur mesure qui apportent confort et efficacité dans leur quotidien professionnel. Mon objectif principal est de garantir la satisfaction du client, en développant des outils intuitifs et performants qui facilitent leur travail et optimisent leur productivité.</p>
-                        
-                    <p>Je suis également capable de déterminer la faisabilité d’un projet, en évaluant les contraintes techniques et en apportant des conseils avisés sur les meilleures approches à adopter. Mon approche est orientée vers la collaboration, la transparence et l'innovation, avec l'ambition de créer des solutions robustes et durables.</p>
+        <section id="qui-je-suis" class="py-5">
+            <div class="container me-container">
+                <!-- Titre centré en haut de la section -->
+                <div class="text-center mb-4">
+                    <h2 class="s">Qui je suis ?</h2>
                 </div>
-    
-                <!-- Séparateur vertical (visible sur grand écran) -->
-                <div class="col-md-2 d-none d-md-block">
-                    <div class="separator"></div>
-                </div>
-
-
-                <!-- Colonne pour l'image à gauche -->
-                <div class="col-12 col-md-5 mb-4 mb-md-0 img-container d-none d-md-block">
-                    <img src="./images/cv.jpg" alt="CV" class="img-fluid">
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projets" class="text-center py-5">
-        <h2>Vos projets numériques sur mesure</h2>
-        <p>
-            Vous avez une idée et souhaitez la concrétiser avec un outil numérique ? Que ce soit un site web pour 
-            présenter votre activité, une application pour faciliter votre travail ou un logiciel personnalisé, 
-            je peux vous accompagner dans sa création. Ensemble, nous transformons vos besoins en une solution efficace et adaptée.
-        </p>
         
-        <div class="container mt-4">
-            <div class="row">
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <div class="card shadow-sm h-100">
-                        <img src="./images/site-web.jpg" alt="Création de site web" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h4 class="card-title">Un site web pour être visible</h4>
-                            <p class="card-text">Votre vitrine sur internet, accessible à tout moment pour vos clients.</p>
-                        </div>
+                <div class="row">
+                    
+                    <!-- Colonne pour la description à droite -->
+                    <div class="col-12 col-md-5 text-lg-start mobile-qui-je-suis">
+                        <p class="mb-5 barlow-semi-condensed-medium">Fort de plusieurs années d'expérience dans le domaine du développement informatique, je suis un développeur polyvalent et passionné, capable de créer des solutions logicielles et web adaptées aux besoins spécifiques des clients. Mon expertise couvre une large gamme de langages de programmation et de technologies, me permettant d'intervenir dans différents secteurs pour répondre aux défis techniques de chaque projet.</p>
+
+                        <p class="mb-5 barlow-semi-condensed-medium">Ma capacité d'écoute et ma réactivité, je suis en mesure de comprendre rapidement les besoins de mes clients et de proposer des solutions sur mesure qui apportent confort et efficacité dans leur quotidien professionnel. Mon objectif principal est de garantir la satisfaction du client, en développant des outils intuitifs et performants qui facilitent leur travail et optimisent leur productivité.</p>
+                            
+                        <p class="barlow-semi-condensed-medium">Je suis également capable de déterminer la faisabilité d’un projet, en évaluant les contraintes techniques et en apportant des conseils avisés sur les meilleures approches à adopter. Mon approche est orientée vers la collaboration, la transparence et l'innovation, avec l'ambition de créer des solutions robustes et durables.</p>
+                    </div>
+        
+                    <!-- Séparateur vertical (visible sur grand écran) -->
+                    <div class="col-md-2 d-none d-md-block">
+                        <div class="separator"></div>
+                    </div>
+
+
+                    <!-- Colonne pour l'image à gauche -->
+                    <div class="col-12 col-md-5 mb-4 mb-md-0 img-container d-none d-md-block">
+                        <img src="./images/cv.jpg" alt="CV" class="img-fluid">
                     </div>
                 </div>
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <div class="card shadow-sm h-100">
-                        <img src="./images/application-automatisation.jpg" alt="Développement d'application" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h4 class="card-title">Une application pour simplifier votre travail</h4>
-                            <p class="card-text">Un outil sur mesure pour automatiser des tâches et gagner en efficacité.</p>
+            </div>
+        </section>
+
+        <section id="projets" class="text-center py-5">
+            <h2 class="barlow-semi-condensed-semibold projet-text">Vos projets numériques sur mesure</h2>
+            
+            <div class="col-12 text-center">
+                <p class="barlow-semi-condensed-medium col-12 p-5 text-md-start w-50 mx-auto d-block projet-text">
+                    Que ce soit un site web pour présenter votre activité, une application pour faciliter votre travail ou un logiciel personnalisé, je peux vous accompagner dans sa création. Ensemble, nous transformons vos besoins en une solution efficace et adaptée.
+                </p>
+            </div>
+        
+            
+            <div class="container mt-4">
+                <div class="row">
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <div class="card shadow-sm h-100">
+                            <img src="./images/site-web.jpg" alt="Création de site web" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h4 class="card-title">Un site web pour être visible</h4>
+                                <p class="card-text">Votre vitrine sur internet, accessible à tout moment pour vos clients.</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="col-12 col-md-4 mb-4 mb-md-0">
-                    <div class="card shadow-sm h-100">
-                        <img src="logiciel-personnalise.jpg" alt="Logiciel personnalisé" class="card-img-top img-fluid">
-                        <div class="card-body">
-                            <h4 class="card-title">Un logiciel adapté à vos besoins</h4>
-                            <p class="card-text">Un développement sur mesure pour répondre à vos exigences spécifiques.</p>
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <div class="card shadow-sm h-100">
+                            <img src="./images/application-automatisation.jpg" alt="Développement d'application" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h4 class="card-title">Une application pour simplifier votre travail</h4>
+                                <p class="card-text">Un outil sur mesure pour automatiser des tâches et gagner en efficacité.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-4 mb-4 mb-md-0">
+                        <div class="card shadow-sm h-100">
+                            <img src="./images/dashboard.jpg" alt="Logiciel personnalisé" class="card-img-top img-fluid">
+                            <div class="card-body">
+                                <h4 class="card-title">Un logiciel adapté à vos besoins</h4>
+                                <p class="card-text">Un développement sur mesure pour répondre à vos exigences spécifiques.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact" class="text-center py-5">
-        <h2>Contact</h2>
-        <p class="mb-4">Vous pouvez me contacter via le formulaire ci-dessous ou venir me rendre visite à mon adresse.</p>
-    
-        <!-- Conteneur Bootstrap -->
-        <div class="container">
-            <div class="row justify-content-center">
-                <!-- Colonne Carte -->
-                <div class="col-md-6 mb-4">
-                    <div id="map"></div>
-                </div>
-                <!-- Colonne Formulaire -->
-                <div class="col-md-6">
-                    <p class="mb-4">Vous pouvez me contacter via le formulaire ci-dessous ou venir me rendre visite à mon adresse.</p>
-                    <form>
-                        <input type="text" class="form-control mb-3" placeholder="Votre nom" required>
-                        <input type="email" class="form-control mb-3" placeholder="Votre email" required>
-                        <textarea rows="5" class="form-control mb-3" placeholder="Votre message" required></textarea>
-                        <button type="submit" class="btn btn-primary">Envoyer</button>
-                    </form>
+        <section id="contact" class="text-center py-5">
+            <h2 class="barlow-semi-condensed-semibold">Contact</h2>
+            <p class="mb-4">Vous pouvez me contacter via le formulaire ci-dessous ou venir me rendre visite à mon adresse.</p>
+        
+            <!-- Conteneur Bootstrap -->
+            <div class="container">
+                <div class="row justify-content-center">
+                    <!-- Colonne Carte -->
+                    <div class="col-md-6 mb-4">
+                        <div id="map"></div>
+                    </div>
+                    <!-- Colonne Formulaire -->
+                    <div class="col-md-6">
+                        <p class="mb-4">Vous pouvez me contacter via le formulaire ci-dessous ou venir me rendre visite à mon adresse.</p>
+                        <form>
+                            <input type="text" class="form-control mb-3" placeholder="Votre nom" required>
+                            <input type="email" class="form-control mb-3" placeholder="Votre email" required>
+                            <textarea rows="5" class="form-control mb-3" placeholder="Votre message" required></textarea>
+                            <button type="submit" class="btn btn-primary">Envoyer</button>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Lien vers les scripts de Bootstrap -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
+        <!-- Lien vers les scripts de Bootstrap -->
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
-
-    <script src="bundle.js"></script>
-</body>
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+        
+        <script src="bundle.js"></script>
+    </body>
 </html>
