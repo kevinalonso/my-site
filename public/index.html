@@ -14,7 +14,10 @@
             <nav class="navbar navbar-expand-lg navbar-dark bg-black">
                 <div class="container-fluid">
                     <!-- Logo en haut à gauche -->
-                    <a class="navbar-brand" href="#accueil">Logo</a>
+                    <a class="navbar-brand" href="#accueil">
+                        <img src="./images/logo.png" alt="kévin alonso développeur" class="img-fluid logo">
+                        <h1 class="barlow-semi-condensed-extralight-italic title-web-site">ALONSO Kévin</h1>
+                    </a>
 
                     <!-- Menu burger pour mobile -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -44,8 +47,6 @@
 
         <!-- Sections de contenu -->
         <section id="accueil">
-            
-            <h1>JE sais pas quoi</h1>
 
             <div id="carouselExampleCaptions" class="carousel slide">
                 <div class="carousel-indicators">
@@ -94,6 +95,7 @@
                 <div class="text-center mb-4">
                     <h2 class="barlow-semi-condensed-semibold">Qui je suis ?</h2>
                 </div>
+                
         
                 <div class="row">
                     
@@ -164,9 +166,29 @@
         </section>
 
         <section id="contact" class="text-center">
+           
             <h2 class="barlow-semi-condensed-semibold">Contact</h2>
-            <p class="mb-4 barlow-semi-condensed-medium">Vous pouvez me contacter via le formulaire ci-dessous ou par téléphone</p>
-        
+
+            <div class="col-12 text-center">
+                <div class="d-flex justify-content-center align-items-center flex-wrap">
+                    <div class="col-md-6 mb-2 tel-contact d-flex justify-content-center">
+                        <a href="tel:0683636466" class="text-decoration-none text-body">
+                            <i class="fas fa-phone m-md-3"></i>
+                            <span class="mb-4 barlow-semi-condensed-medium">06.83.63.64.66</span>
+                        </a>
+                    </div>
+                    
+                    <div class="col-md-6 mb-2 email-contact d-flex justify-content-center">
+                        <a href="mailto:k.alonso@outlook.fr" class="text-decoration-none text-body">
+                            <i class="fas fa-envelope m-md-3"></i>
+                            <span class="mb-4 barlow-semi-condensed-medium">k.alonso@outlook.fr</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-top my-4 separateur-contact"></div>
+                
             <!-- Conteneur Bootstrap -->
             <div class="container">
                 <div class="row justify-content-center">
@@ -176,21 +198,9 @@
                     </div>
                     <!-- Colonne Formulaire -->
                     <div class="col-md-6">
-                        <div class="d-flex justify-content-between align-items-center flex-wrap">
-                            <div class="col-md-6 mb-2 tel-contact d-flex ">
-                                <a href="tel:0683636466" class="text-decoration-none text-body">
-                                    <i class="fas fa-phone m-md-3"></i>
-                                    <span class="mb-4 barlow-semi-condensed-medium">06.83.63.64.66</span>
-                                </a>
-                            </div>
-                            
-                            <div class="col-md-6 mb-2 email-contact d-flex justify-content-md-end">
-                                <a href="mailto:contact@example.com" class="text-decoration-none text-body">
-                                    <i class="fas fa-envelope m-md-3"></i>
-                                    <span class="mb-4 barlow-semi-condensed-medium">contact@example.com</span>
-                                </a>
-                            </div>
-                        </div>
+                        <p class="barlow-semi-condensed-medium text-md-start">Société de développement informatique à MONTIGNE LE BRILLANT 53970</p>
+                        <p class="barlow-semi-condensed-medium text-md-start">Besoin de conseil ou d'un devis pour un projet, contactez moi afin d'échanger ensemble</p>
+                        
                         <form>
                             <div class="d-flex align-items-center mb-3">
                                 <i class="fa-solid fa-2x fa-user m-md-3"></i>
@@ -204,7 +214,7 @@
 
                             <div class="d-flex mb-3">
                                 <i class="fa-solid fa-2x fa-message m-md-3"></i>
-                                <textarea rows="5" class="form-control" placeholder="Message" required></textarea>
+                                <textarea rows="4" class="form-control" placeholder="Message" required></textarea>
                             </div>
 
                             <button type="submit" class="btn btn-primary"><i class="fa fa-paper-plane"></i> Envoyer</button>

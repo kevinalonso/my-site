@@ -18,13 +18,13 @@ body {
 
 header {
     background: #000000;
-    padding: 15px;
+    //padding: 15px;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 9999; /* S'assurer que le header soit toujours au-dessus */
-    height: 75px; /* Assurez-vous de définir une hauteur fixe pour le header */
+    height: 50px; /* Assurez-vous de définir une hauteur fixe pour le header */
 }
 
 header nav ul {
@@ -48,11 +48,29 @@ header nav ul li a {
     color: #ffffff;
 }
 
+.navbar-brand {
+    display: flex;
+    align-items: center; /* Centre verticalement le logo et le texte */
+    gap: 10px; /* Ajoute un espacement entre le logo et le texte */
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+.logo{
+    height: 30px;
+}
+
+.title-web-site{
+    font-size: 1.5rem;
+    color: #efcc95;
+    margin: 0;
+    white-space: nowrap;
+}
+
 section {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: start;
     text-align: center;
     padding: 50px;
     padding-top: 4%;
@@ -199,6 +217,15 @@ section {
     object-fit: cover;
 }
 
+.fa-phone,.fa-envelope,.fa-user,.fa-message{
+    color: #efcc95;
+}
+
+
+.separateur-contact{
+        border-top-color: #000000 !important;
+}
+   
 
 .projet-text{
     color: #ffffff;
