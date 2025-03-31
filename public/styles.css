@@ -120,6 +120,7 @@
 @charset "UTF-8";
 /***CODE COULEUR HEXA***/
 /************************/
+/*Import des polices*/
 body {
   font-family: Arial, sans-serif;
   margin: 0;
@@ -128,14 +129,13 @@ body {
 
 header {
   background: #000000;
-  padding: 15px;
   position: fixed;
   width: 100%;
   top: 0;
   left: 0;
   z-index: 9999;
   /* S'assurer que le header soit toujours au-dessus */
-  height: 75px;
+  height: 50px;
   /* Assurez-vous de définir une hauteur fixe pour le header */ }
 
 header nav ul {
@@ -155,13 +155,32 @@ header nav ul li a {
 .nav-link {
   color: #ffffff; }
 
+.navbar-brand {
+  display: flex;
+  align-items: center;
+  /* Centre verticalement le logo et le texte */
+  gap: 10px;
+  /* Ajoute un espacement entre le logo et le texte */
+  text-decoration: none;
+  /* Supprime le soulignement */ }
+
+.logo {
+  height: 30px; }
+
+.title-web-site {
+  font-size: 1.5rem;
+  color: #efcc95;
+  margin: 0;
+  white-space: nowrap; }
+
 section {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   text-align: center;
-  padding: 50px; }
+  padding: 50px;
+  padding-top: 4%; }
 
 /* Section Accueil */
 #accueil {
@@ -213,7 +232,7 @@ section {
   background-color: transparent; }
 
 #qui-je-suis {
-  background: ffffff;
+  background: #ffffff;
   /* Ajoutez une couleur de fond si vous souhaitez */ }
 
 #qui-je-suis img {
@@ -222,7 +241,7 @@ section {
   height: auto;
   /* Maintenir les proportions de l'image */ }
 
-#projets {
+#projets, #accueil {
   background: repeating-linear-gradient(45deg, #efcc95, #efcc95 40%, #e6b877 5%, #e6b877 100%);
   background-position: left top;
   /* Assure que les bandes partent de la gauche */
@@ -263,6 +282,9 @@ section {
 #contact {
   background-color: #ffffff; }
 
+.tel-contact {
+  text-align: left; }
+
 #map {
   width: 100%;
   height: 400px;
@@ -272,16 +294,56 @@ section {
 
 .card {
   height: 400px;
-  /* Ajustez cette valeur selon vos besoins */ }
+  /* Ajustez cette valeur selon vos besoins */
+  opacity: 0;
+  /* Cacher au départ */
+  transform: translateY(50px);
+  /* Décalage vers le bas */
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out; }
+
+.card.visible-translation {
+  opacity: 1;
+  transform: translateY(0); }
+
+.card:nth-child(1) {
+  animation: fadeInUp 0.8s ease-out forwards 0.2s; }
+
+.card:nth-child(2) {
+  animation: fadeInUp 0.8s ease-out forwards 0.6s; }
+
+.card:nth-child(3) {
+  animation: fadeInUp 0.8s ease-out forwards 1s; }
 
 .card-img-top {
   height: 400px;
   -o-object-fit: cover;
   object-fit: cover; }
 
+.fa-phone, .fa-envelope, .fa-user, .fa-message {
+  color: #efcc95; }
+
+.separateur-contact {
+  border-top-color: #000000 !important; }
+
 .projet-text {
   color: #ffffff;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); }
+
+.back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  opacity: 0.7;
+  transition: opacity 0.3s; }
+
+.back-to-top:hover {
+  opacity: 1; }
 
 @media (max-width: 768px) {
   .separator {
