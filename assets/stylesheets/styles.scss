@@ -250,6 +250,22 @@ section {
     opacity: 1;
 }
 
+@media (min-width: 768px) { /* Applique l'effet seulement sur PC */
+    .img-container {
+        overflow: hidden; /* Empêche le débordement de l'image */
+        display: inline-block; /* Ajuste la taille au contenu */
+        cursor: pointer; /* Curseur de zoom */
+    }
+
+    .img-container img {
+        transition: transform 0.3s ease-in-out;
+    }
+
+    .img-container:hover img {
+        transform: scale(1.2); /* Zoom à 1.5x */
+    }
+}
+
 @media (max-width: 768px) {
     .separator {
         display: none; /* Cacher le séparateur sur les petits écrans */
