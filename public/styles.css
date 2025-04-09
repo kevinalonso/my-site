@@ -350,5 +350,7 @@ section {
     display: none;
     /* Cacher le séparateur sur les petits écrans */ }
   .mobile-qui-je-suis {
-    text-align: left !important; } }
-
+    text-align: left !important; 
+  }
+  
+}  

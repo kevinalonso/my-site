@@ -2,86 +2,71 @@ export function NavigationSection() {
     const cards = document.querySelectorAll('.card');
     const sections = document.querySelectorAll('section');
     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    let currentVisibleSection = null;
 
-    // Fonction pour activer l'animation des cartes
     const activateCardsAnimation = () => {
         cards.forEach((card, index) => {
-
-            let delay = index * 400;
-            // Ajout de la classe 'visible' pour activer l'animation
             setTimeout(() => {
                 card.classList.add('visible-translation');
-            }, delay);
+            }, index * 400);
         });
     };
 
-    // Fonction pour cacher les cartes
     const hideCards = () => {
-        cards.forEach((card) => {
-            // Retirer la classe 'visible' pour cacher les cartes
-            card.classList.remove('visible-translation');
-        });
+        cards.forEach(card => card.classList.remove('visible-translation'));
     };
 
-    // Fonction pour mettre à jour l'URL en fonction de la section visible
     const updateURL = (id) => {
-        history.pushState(null, null, `#${id}`);
+        if (id !== currentVisibleSection) {
+            history.pushState(null, null, `#${id}`);
+            currentVisibleSection = id;
 
-        // Si la section visible est #projets, activer les animations des cartes
-        if (id === 'projets') {
-            activateCardsAnimation();
-        } else {
-            hideCards();
+            navLinks.forEach(link => {
+                link.classList.toggle('active', link.getAttribute('href') === `#${id}`);
+            });
+
+            if (id === 'projets') {
+                activateCardsAnimation();
+            } else {
+                hideCards();
+            }
         }
     };
 
-    // Observer pour suivre les sections visibles
-    const observerOptions = {
-        root: null, // viewport
-        threshold: 0.5 // 50% de la section doit être visible pour déclencher l'événement
-    };
-
-    const observerCallback = (entries, observer) => {
+    const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const id = entry.target.id;
-                updateURL(id); // Mettre à jour l'URL
-                
-                // Ajouter une classe "active" au lien correspondant dans la barre de navigation
-                navLinks.forEach(link => {
-                    if (link.getAttribute('href') === `#${id}`) {
-                        link.classList.add('active');
-                    } else {
-                        link.classList.remove('active');
-                    }
-                });
-
-                
+                updateURL(entry.target.id);
             }
         });
-    };
+    }, { threshold: 0.5 });
 
-    // Créer l'Intersection Observer
-    const observer = new IntersectionObserver(observerCallback, observerOptions);
+    sections.forEach(section => observer.observe(section));
 
-    // Observer chaque section
-    sections.forEach(section => {
-        observer.observe(section);
-    });
-
-    // Gérer les clics sur les liens de la barre de navigation
     navLinks.forEach(link => {
-        link.addEventListener('click', (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute('href').substring(1); // Extrait l'ID de la section
-            document.getElementById(targetId).scrollIntoView({
-                behavior: 'smooth'
-            });
-            updateURL(targetId); // Mettre à jour l'URL
+        link.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = link.getAttribute('href').substring(1);
+            const target = document.getElementById(targetId);
+
+            target?.scrollIntoView({ behavior: 'smooth' });
+            updateURL(targetId);
         });
     });
 
-    // Vérifier si l'URL contient #projets dès le chargement de la page
+    // Forcer le check manuel sur scroll (utile sur mobile quand l'observer bug)
+    window.addEventListener('scroll', () => {
+        const projetsSection = document.getElementById('projets');
+        if (projetsSection) {
+            const rect = projetsSection.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight * 0.5 && rect.bottom > window.innerHeight * 0.5;
+            if (isVisible && currentVisibleSection !== 'projets') {
+                updateURL('projets');
+            }
+        }
+    }, { passive: true });
+
+    // Check initial à l'ouverture
     if (document.location.hash === '#projets') {
         activateCardsAnimation();
     } else {
